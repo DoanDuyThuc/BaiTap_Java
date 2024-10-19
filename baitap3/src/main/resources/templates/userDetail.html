@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Detail</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" /> <!-- Nếu bạn có file CSS -->
+</head>
+<body>
+<h1>User Details</h1>
+
+<div>
+    <p><strong>ID:</strong> <span th:text="${user.id}"></span></p>
+    <p><strong>First Name:</strong> <span th:text="${user.firstName}"></span></p>
+    <p><strong>Last Name:</strong> <span th:text="${user.lastName}"></span></p>
+</div>
+
+<a th:href="@{/home}">Back to Home</a>
+</body>
+</html>
