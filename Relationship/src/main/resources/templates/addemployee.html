@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo thông tin nhân viên</title>
+</head>
+<body>
+<form th:action="@{/addemployee}" th:object="${employee}" method="post">
+    <h1>Vui lòng điền thông tin nhân viên</h1>
+    <div>
+        <input type="text" th:field="*{username}" placeholder="Tên nhân viên">
+    </div>
+    <div>
+        <input type="text" th:field="*{email}" placeholder="Email">
+    </div>
+    <div>
+        <input type="number" th:field="*{numberphone}" placeholder="Số điện thoại">
+    </div>
+
+<!--    <div>-->
+<!--        <div>Công ty</div>-->
+<!--        <select th:field="*{company.id}" required>-->
+<!--            <option value="" disabled selected>Chọn công ty</option>-->
+<!--            <option th:each="company : ${company}" th:value="${company.id}" th:text="${company.companyName}"></option>-->
+<!--        </select>-->
+<!--    </div>-->
+    <div>
+        <div>Công ty</div>
+        <select th:field="*{companies}" multiple required>
+            <option value="" disabled selected>Chọn công ty</option>
+            <option th:each="company : ${companyList}" th:value="${company.id}" th:text="${company.companyName}"></option>
+        </select>
+    </div>
+
+    <button type="submit">Lưu thông tin</button>
+</form>
+</body>
+</html>

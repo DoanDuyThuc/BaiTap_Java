@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cập nhật thông tin nhân viên</title>
+</head>
+<body>
+<form th:action="@{/updateemployee/{id} (id = ${employee.id})}" th:object="${employee}" method="post">
+  <h1>Chỉnh sửa thông tin nhân viên</h1>
+  <div>
+    <input type="text" id="username" th:field="*{username}" placeholder="Nhập tên nhân viên">
+  </div>
+  <div>
+    <input type="text" id="email" th:field="*{email}" placeholder="Nhập Email nhân viên">
+  </div>
+  <div>
+    <input type="number" id="numberphone" th:field="*{numberphone}" placeholder="Nhập số điện thoại">
+  </div>
+  <button type="submit">Lưu thay đổi</button>
+</form>
+</body>
+</html>

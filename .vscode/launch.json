@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-RelationshipApplication<Relationship>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "Relationship.RelationshipApplication",
+            "projectName": "Relationship",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=51848 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=Relationship"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Baitap1Application<baitap1>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "baitap1.baitap1.Baitap1Application",
+            "projectName": "baitap1",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

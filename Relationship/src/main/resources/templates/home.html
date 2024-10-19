@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+</head>
+<body>
+<section class="section">
+    <div class="container">
+        <h1 class="title">Hello</h1>
+        <h1>Welcome, : <span th:text="${username}"></span>!</h1>
+    <p>Your roles are:</p>
+    <ul>
+        <li th:each="role : ${roles}">
+            <span th:text="${role.authority}"></span>
+        </li>
+    </ul>
+
+           <div class="buttons">
+            <a th:href="@{/addemployee}" class="button is-primary">Add Employee</a>
+            <a th:href="@{/savecompany}" class="button is-link">Save Company</a>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>

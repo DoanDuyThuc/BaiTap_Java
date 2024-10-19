@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Thông tin công ty</title>
+</head>
+<body>
+<div>
+  <h1>Danh sách công ty</h1>
+  <table border="1px">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Tên Công Ty</th>
+      <th>Phương thức</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr th:each="company : ${companyList}">
+        <td th:text="${company.id}"></td>
+        <td th:text="${company.companyName}"></td>
+        <td>
+          <a th:href="@{/updatecompany/{id} (id = ${company.id})}">Cập nhật</a>
+          <a th:href="@{/deletecompany/{id} (id = ${company.id})}">Xoá</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
